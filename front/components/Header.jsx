@@ -10,15 +10,15 @@ const Box = styled.header`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-attachment: fixed;
     align-items: center;
 
-    
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/474x/e0/87/c6/e087c61ad0682c9fa4c8a9d1ba7d6834.jpg");
 `;
 
 const TopBox = styled.div`
     width: 100%;
     height: 50%;
-    border-bottom: 0.3px solid #fff;
 
     display: flex;
     flex-direction: row;
