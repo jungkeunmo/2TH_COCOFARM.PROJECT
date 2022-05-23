@@ -14,10 +14,6 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.get("/api/test", (req, res, next) => {
-    console.log("❌ TEST CALLED!!")
-});
-
 app.use("/api/contact", contactRouter);
 
 app.listen(PORT, () => {

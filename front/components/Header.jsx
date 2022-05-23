@@ -5,15 +5,14 @@ import Link from "next/link";
 const Box = styled.header`
     width: 100%;
     height: 120px;
-    background: linear-gradient(45deg,#c1d7ae, #8cc084);
-    color: #fff;
+    color: #000;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    box-shadow: 2px 2px 8px #999;
+    
 `;
 
 const TopBox = styled.div`
@@ -38,7 +37,7 @@ const BottomBox = styled.div`
 `;
 
 const TitleLink = styled.a`
-    color: #fff;
+    color: #000;
 
     margin: 0px 40px;
 
@@ -55,7 +54,7 @@ const TitleLink = styled.a`
 `;
 
 const CustomLink = styled.a`
-    color: #fff;
+    color: #000;
 
     margin: 0px 40px;
 

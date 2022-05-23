@@ -98,21 +98,6 @@ const CustomBtn = styled(Button)`
 `;
 
 const Brand = () => {
-
-    const getFram = async() => {
-        const res = await axios.get("http://localhost:4000/api/test")
-    };
-
-    useEffect(() => {
-        getFram();
-    }, []);
-
-    const rt = useRouter();
-
-    const goContact = () => {
-        rt.push("/contact");
-    };
-
     return (
         <Wrapper>
             <Fade>
