@@ -29,6 +29,7 @@ const TopImage = styled.img`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+    background-image: url("img/img1.png");
 
     box-shadow: 3px 3px 7px #999;
 
@@ -102,7 +103,7 @@ const Brand = () => {
         <Wrapper>
             <Fade>
                 <RelWrapper>
-                    <TopImage src="https://i.pinimg.com/474x/72/cb/7b/72cb7b87f64c6f6819c2f2cedf09b17f.jpg"/>
+                    <TopImage src=""/>
 
                     <TextBox>
                         <div>건강한 식단과</div>
@@ -119,7 +120,7 @@ const Brand = () => {
             <DescTitle />
             <DescView mode={1} 
                 title="코코팜은"
-                image="https://i.pinimg.com/474x/c4/ec/c0/c4ecc0c80aa0dce3ec267949535fe707.jpg"
+                image="https://i.ibb.co/rF86GRW/2eab7baa28ff32564243890f817edfb5.jpg"
                 desc1="저희 코코팜은 쌀,콩,고추,옥수수,감자,오이,고구마,깨,배추,양배추,포도,수박, 등등을"
                 desc2="무농약으로 재배하고 있습니다."
                 desc3="앞으로도 고객 여러분들께 깨끗하고 신선한 농산물을 전달하겠습니다."

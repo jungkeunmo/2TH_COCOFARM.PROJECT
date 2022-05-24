@@ -11,12 +11,8 @@ const Box = styled.header`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url("https://i.pinimg.com/474x/ce/7e/59/ce7e597236d70c8f1e23a9f724e9f64b.jpg");
+    
+    background-color: #2b73b2;
 `;
 
 const TopBox = styled.div`
