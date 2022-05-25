@@ -56,6 +56,8 @@ const Wrapper1__Img = styled.img`
     background-position: center center;
 
     border-radius: 6px;
+
+    box-shadow: 0.5px 0.5px 4px #9c9c9c;
 `;
 
 const Wrapper1__Text = styled.div`
@@ -126,6 +128,8 @@ const Wrapper2__Box = styled.div`
   padding: 0px 50px;
 
   border-radius: 6px;
+
+  box-shadow: 0.5px 0.5px 4px #9c9c9c;
 `;
 
 const Wrapper2__top = styled.div`
@@ -180,7 +184,7 @@ const Wrapper3__BoxText = styled.div`
 
   border-bottom: 2px solid #000;
 
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 `;
 
 
@@ -195,6 +199,8 @@ const Wrapper3__Img = styled.img`
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+
+    box-shadow: 0.5px 0.5px 4px #9c9c9c;
 `;
 
 const Wrapper3__Desc = styled.p`
@@ -227,6 +233,8 @@ const Wrapper4__Box = styled.div`
   background-color: #3b5a7a;
 
   padding: 0px 130px;
+
+  box-shadow: 0.5px 0.5px 4px #9c9c9c;
 `;
 
 const Wrapper5 = styled.div`
@@ -246,6 +254,12 @@ const Wrapper6 = styled.div`
 
     padding: 0px 130px;
 
+    background-image: url("https://t4.ftcdn.net/jpg/03/26/65/57/240_F_326655732_pX1N41kCv3XiyIqTEk0KzboBJrAAi5hO.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -256,7 +270,9 @@ const Wrapper6__img = styled.img`
   width: 230px;
   height: 230px;
 
-  background-color: #54738d;
+  border-radius: 6px;
+
+  box-shadow: 0.5px 0.5px 4px #9c9c9c;
 `;
 
 
@@ -326,12 +342,12 @@ const MyWeb = () => {
             </Wrapper4>
             <Wrapper5></Wrapper5>
             <Wrapper6>
-                <Wrapper6__img></Wrapper6__img>
-                <Wrapper6__img></Wrapper6__img>
-                <Wrapper6__img></Wrapper6__img>
-                <Wrapper6__img></Wrapper6__img>
-                <Wrapper6__img></Wrapper6__img>
-                <Wrapper6__img></Wrapper6__img>
+                <Wrapper6__img src="https://i.pinimg.com/236x/73/e8/f5/73e8f53c73abf6288bb22ebe164d23ac.jpg"></Wrapper6__img>
+                <Wrapper6__img src="https://i.pinimg.com/236x/11/37/95/113795baf4684354ce3187d30815b630.jpg"></Wrapper6__img>
+                <Wrapper6__img src="https://i.pinimg.com/236x/1d/29/62/1d2962ffa7a1cb100eac70c575759873.jpg"></Wrapper6__img>
+                <Wrapper6__img src="https://i.pinimg.com/236x/97/2c/3d/972c3d5723ee4c90d98ffcae2235901f.jpg"></Wrapper6__img>
+                <Wrapper6__img src="https://i.pinimg.com/236x/50/22/99/502299b2422423962aedda73d1e597cc.jpg"></Wrapper6__img>
+                <Wrapper6__img src="https://i.pinimg.com/236x/ba/e1/e1/bae1e1aa5faf48701617ba58419d8be0.jpg"></Wrapper6__img>
             </Wrapper6>
         </Body>
     );
