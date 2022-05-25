@@ -12,16 +12,6 @@ const Icon = styled.div`
     background-image: url("https://i.ibb.co/dM0yzt4/0661c2b408901b4f0a518787ca2aa58b-removebg-preview.png");
 `;
 
-const SininBox = styled.div`
-    width: 30%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`;
-
 const SininButton = styled.button`
     width: 100px;
     height: 30px;
@@ -31,6 +21,7 @@ const SininButton = styled.button`
 
     font-size: 15px;
 
+    margin: 0px 0px 0px 620px;
     border: none;
 
     border-radius: 5px;
@@ -56,17 +47,19 @@ const Box = styled.header`
 `;
 
 const TopBox = styled.div`
-    width: 100%;
+    width: 90%;
     height: 50%;
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+
+    border-bottom: 1px solid #999;
 `;
 
 const BottomBox = styled.div`
-    width: 90%;
+    width: 80%;
     height: 50%;
 
     display: flex;
@@ -117,11 +110,10 @@ const Header = () => {
                 <Link href="/">
                     <TitleLink>COCOFARM</TitleLink>
                 </Link>
-                <SininBox>
-                    <SininButton>
-                        로그인
-                    </SininButton>
-                </SininBox>
+        
+                <SininButton>
+                    로그인
+                </SininButton>
             </TopBox>
 
             <BottomBox>
