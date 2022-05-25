@@ -2,9 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
+const Icon = styled.div`
+    width: 50px;
+    height: 50px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image: url("https://i.ibb.co/dM0yzt4/0661c2b408901b4f0a518787ca2aa58b-removebg-preview.png");
+`;
+
 const Box = styled.header`
     width: 100%;
     height: 120px;
+
+    top: 0;
     color: #000;
 
     display: flex;
@@ -12,7 +24,7 @@ const Box = styled.header`
     justify-content: center;
     align-items: center;
     
-    background-color: #2b73b2;
+    background-color: #D3E4CD;
 `;
 
 const TopBox = styled.div`
@@ -72,6 +84,7 @@ const Header = () => {
     return (
         <Box>
             <TopBox>
+                <Icon></Icon>
                 <Link href="/">
                     <TitleLink>COCOFARM</TitleLink>
                 </Link>

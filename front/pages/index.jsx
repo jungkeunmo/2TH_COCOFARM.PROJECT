@@ -14,7 +14,7 @@ const Wrapper1 = styled.div`
     width: 100%;
     height: 100vh;
 
-    background-color: #2b73b2;
+    background-color: #D3E4CD;
 
     display: flex;
     flex-direction: row;
@@ -35,10 +35,10 @@ const Wrapper1__Box1 = styled.div`
 `;
 
 const Wrapper1__lien = styled.div`
-    width: 10px;
-    height: 400px;
+    width: 2px;
+    height: 420px;
 
-    background-color: #000;
+    background-color: #999B84;
 `;
 
 const Wrapper1__Box2 = styled.div`
@@ -47,11 +47,15 @@ const Wrapper1__Box2 = styled.div`
 `;
 
 const Wrapper1__Img = styled.img`
-    width: 60%;
-    height: 60%;
+    width: 69%;
+    height: 69%;
 
-    background-image: url("https://i.pinimg.com/236x/54/9d/84/549d84958cd3624449f477e0632f936a.jpg");
-    background-color: aqua;
+    background-image: url("https://i.pinimg.com/474x/b6/cc/ea/b6cceacde2796477ed8851dec58ad9dc.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    border-radius: 5px;
 `;
 
 const Wrapper1__Text = styled.div`
@@ -60,26 +64,43 @@ const Wrapper1__Text = styled.div`
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-
-    background-color: #7d868e;
 `;
 
 const Wrapper1__Titile = styled.p`
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bold;
 
-    margin: 0;
+    margin: 10px 150px 50px 50px;
+`;
+
+const Wrapper1__Day = styled.p`
+    font-size: 15px;
+    font-weight: 900;
+
+    color: #1c251e;
+
+    margin: 5px 50px 5px;
 `;
 
 const Wrapper1__Desc = styled.p`
-    font-size: 20px;
+    font-size: 16px;
 
-    margin: 0;
+    margin: 2px 50px;
 `;
 
 const Wrapper1__button = styled.button`
-   font-size: 20px;
+    width: 150px;
+    height: 30px;
+
+    background-color: #99A799;
+    color: #fff;
+
+    font-size: 15px;
+
+    margin: 30px 50px 10px;
+    border: none;
 `;
 
 /* */
@@ -87,7 +108,7 @@ const Wrapper2 = styled.div`
     width: 100%;
     height: 95vh;
 
-    background-color: #41627f;
+    background-color: #FEF5ED;
 
     display: flex;
     flex-direction: row;
@@ -108,7 +129,7 @@ const Wrapper3 = styled.div`
   width: 100%;
   height: 150vh;
 
-  background-color: #226cac;
+  background-color: #EFD9D1;
 
   padding: 0px 130px;
 
@@ -158,7 +179,7 @@ const Wrapper4 = styled.div`
   width: 100%;
   height: 100vh;
 
-  background-color: #101820;
+  background-color: #99A799;
 
   padding: 0px 130px;
 
@@ -181,7 +202,7 @@ const Wrapper5 = styled.div`
   width: 100%;
   height: 15vh;
 
-  background-color: #134673;
+  background-color: #DDB7AB;
 
   padding: 0px 130px;
 `;
@@ -190,7 +211,7 @@ const Wrapper6 = styled.div`
     width: 100%;
     height: 55vh;
 
-    background-color: #3a75a8;
+    background-color: #FEF5ED;
 
     padding: 0px 130px;
 
@@ -218,12 +239,14 @@ const MyWeb = () => {
                     <Wrapper1__lien></Wrapper1__lien>
                 <Wrapper1__Box2> 
                     <Wrapper1__Text>
-                        <Wrapper1__Titile>COCOFARM</Wrapper1__Titile>
+                    <Wrapper1__Day>2022/05/25</Wrapper1__Day>
+                        <Wrapper1__Titile style={{ color: "#414e43" }}>WELCOME TO COCO FARM COCO FARM IS A PLACE THAT SELLS AGRICULTURAL PRODUCTS</Wrapper1__Titile>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                        <Wrapper1__button>공지사항</Wrapper1__button>
+                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                        <Wrapper1__button>리뷰 보러가기</Wrapper1__button>
                     </Wrapper1__Text>
                 </Wrapper1__Box2>    
             </Wrapper1>
@@ -246,7 +269,7 @@ const MyWeb = () => {
                     <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
                 </Wrapper3__BoxText>  
 
-                <Wrapper1__Titile style={{ borderButton: "1pxsoild#000" }}>COCOFARM</Wrapper1__Titile>  
+                <Wrapper1__Titile>COCOFARM</Wrapper1__Titile>  
                 <Wrapper1__button>공지사항</Wrapper1__button>
             </Wrapper3>
             <Wrapper4>
