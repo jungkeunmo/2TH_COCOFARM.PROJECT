@@ -4,7 +4,7 @@ import {} from "antd";
 
 const Body = styled.div`
     width: 100%;
-    height: 450vh;
+    height: 460vh;
 
     display: flex;
     flex-direction: column;
@@ -89,30 +89,43 @@ const Wrapper2 = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    padding: 0px 130px;
 `;
 
 const Wrapper2__Box = styled.div`
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 70%;
   background-color: #090b0d;
 `;
 
 const Wrapper3 = styled.div`
   width: 100%;
-  height: 105vh;
+  height: 110vh;
   background-color: #226cac;
+
+  padding: 0px 130px;
+`;
+
+const Wrapper3__Img = styled.img`
+  width: 300px;
+  height: 300px;
+  background-color: #486075;
 `;
 
 const Wrapper4 = styled.div`
   width: 100%;
   height: 95vh;
   background-color: #101820;
+
+  padding: 0px 130px;
 `;
 
 const Wrapper5 = styled.div`
   width: 100%;
   height: 55vh;
   background-color: #134673;
+  padding: 0px 130px;
 `;
 
 const MyWeb = () => {
@@ -137,7 +150,13 @@ const MyWeb = () => {
             <Wrapper2>
                 <Wrapper2__Box></Wrapper2__Box>
             </Wrapper2>
-            <Wrapper3></Wrapper3>
+            <Wrapper3>
+                <Wrapper1__Titile>COCOFARM</Wrapper1__Titile>  
+                <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                <Wrapper3__Img></Wrapper3__Img>
+                <Wrapper3__Img></Wrapper3__Img>
+                <Wrapper3__Img></Wrapper3__Img>
+            </Wrapper3>
             <Wrapper4></Wrapper4>
             <Wrapper5></Wrapper5>
         </Body>
