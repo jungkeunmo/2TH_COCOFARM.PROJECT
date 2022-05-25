@@ -47,7 +47,7 @@ const Box = styled.header`
 `;
 
 const TopBox = styled.div`
-    width: 90%;
+    width: 80%;
     height: 50%;
 
     display: flex;
@@ -56,6 +56,36 @@ const TopBox = styled.div`
     align-items: center;
 
     border-bottom: 1px solid #999;
+`;
+
+const TopBox__L = styled.div`
+    width: 40%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+`;
+
+const TopBox__M = styled.div`
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+`;
+
+const TopBox__R = styled.div`
+    width: 40%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 `;
 
 const BottomBox = styled.div`
