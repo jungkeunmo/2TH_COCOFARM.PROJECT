@@ -55,7 +55,7 @@ const Wrapper1__Img = styled.img`
     background-repeat: no-repeat;
     background-position: center center;
 
-    border-radius: 5px;
+    border-radius: 6px;
 `;
 
 const Wrapper1__Text = styled.div`
@@ -122,7 +122,27 @@ const Wrapper2__Box = styled.div`
   width: 60%;
   height: 70%;
 
-  background-color: #090b0d;
+  background-color: #D3E4CD;
+  padding: 0px 50px;
+
+  border-radius: 6px;
+`;
+
+const Wrapper2__top = styled.div`
+  width: 100%;
+  height: 60vh;
+
+  border-bottom: 2px solid #000;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Wrapper2__title = styled.p`
+    font-size: 22px;
+    font-weight: bold;
 `;
 
 const Wrapper3 = styled.div`
@@ -141,38 +161,49 @@ const Wrapper3 = styled.div`
 
 const Wrapper3__Box1 = styled.div`
   width: 100%;
-  height: 50%;
-
-  background-color: #525f6b;
-
-  padding: 0px 130px;
+  height: 40%;
 
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Wrapper3__BoxText = styled.div`
   width: 100%;
   height: 300px;
-
-  background-color: #333d46;
-
-  padding: 0px 130px;
-
+  
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-  border-bottom: 10px solid #000;
+  border-bottom: 2px solid #000;
+
+  margin-bottom: 10px;
 `;
 
 
 const Wrapper3__Img = styled.img`
-  width: 450px;
-  height: 350px;
+    width: 580px;
+    height: 370px;
 
-  background-color: #486075;
+    margin: 20px;
 
-  margin: 20px;
+    border-radius: 6px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+`;
+
+const Wrapper3__Desc = styled.p`
+    width: 33%;
+    height: 100%;
+
+    font-size: 16px;
+
+    margin: 2px 20px;
 `;
 
 const Wrapper4 = styled.div`
@@ -251,25 +282,43 @@ const MyWeb = () => {
                 </Wrapper1__Box2>    
             </Wrapper1>
             <Wrapper2>
-                <Wrapper2__Box></Wrapper2__Box>
+                <Wrapper2__Box>
+                    <Wrapper2__top>
+                        <Wrapper2__title>COCOFARM QUESTION</Wrapper2__title>
+                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                    </Wrapper2__top>
+                </Wrapper2__Box>
             </Wrapper2>
             <Wrapper3>
-                <Wrapper1__Titile>COCOFARM</Wrapper1__Titile>  
+                <Wrapper2__title>COCOFARM QUESTION</Wrapper2__title> 
                 <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-
                 <Wrapper3__Box1>
-                    <Wrapper3__Img></Wrapper3__Img>
-                    <Wrapper3__Img></Wrapper3__Img>
-                    <Wrapper3__Img></Wrapper3__Img>
+                    <Wrapper3__Img src="https://i.pinimg.com/236x/a7/7a/23/a77a234cb2da77ffcc0bae21c5873b13.jpg"></Wrapper3__Img>
+                    <Wrapper3__Img src="https://i.pinimg.com/236x/45/c0/c9/45c0c98b51b47eb841e5bb94636678c4.jpg"></Wrapper3__Img>
+                    <Wrapper3__Img src="https://i.pinimg.com/236x/c5/6f/3e/c56f3e5c8b0de41a0f4e45a372f51582.jpg"></Wrapper3__Img>
                 </Wrapper3__Box1>
 
                 <Wrapper3__BoxText>
-                    <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                    <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                    <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                    <Wrapper3__Desc>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                    </Wrapper3__Desc>
+                    <Wrapper3__Desc>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                    </Wrapper3__Desc>
+                    <Wrapper3__Desc>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                    </Wrapper3__Desc>
                 </Wrapper3__BoxText>  
 
-                <Wrapper1__Titile>COCOFARM</Wrapper1__Titile>  
+                <Wrapper2__title>WELCOME TO COCO FARM COCO FARM IS A PLACE THAT</Wrapper2__title>
                 <Wrapper1__button>공지사항</Wrapper1__button>
             </Wrapper3>
             <Wrapper4>
