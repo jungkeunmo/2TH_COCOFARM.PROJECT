@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {} from "antd";
+import Fade from "react-reveal/Fade";
 
 const Body = styled.div`
     width: 100%;
@@ -381,21 +381,26 @@ const MyWeb = () => {
                 </Wrapper1__Box1>  
                     <Wrapper1__lien></Wrapper1__lien>
                 <Wrapper1__Box2> 
-                    <Wrapper1__Text>
-                    <Wrapper1__Day>2022/05/25</Wrapper1__Day>
-                        <Wrapper1__Titile style={{ color: "#414e43" }}>WELCOME TO COCO FARM COCO FARM IS A PLACE THAT SELLS AGRICULTURAL PRODUCTS</Wrapper1__Titile>
-                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                        <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                        <Wrapper1__button>리뷰 보러가기</Wrapper1__button>
-                    </Wrapper1__Text>
+                    <Fade right>
+                        <Wrapper1__Text>
+                        <Wrapper1__Day>2022/05/25</Wrapper1__Day>
+                            <Wrapper1__Titile style={{ color: "#414e43" }}>WELCOME TO COCO FARM COCO FARM IS A PLACE THAT SELLS AGRICULTURAL PRODUCTS</Wrapper1__Titile>
+                            <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                            <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                            <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                            <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                            <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                            <Wrapper1__button>리뷰 보러가기</Wrapper1__button>
+                        </Wrapper1__Text>
+                    </Fade>
                 </Wrapper1__Box2>    
             </Wrapper1>
+
+            
             <Wrapper2>
                 <Wrapper2__Box>
                     <Wrapper2__top>
+                    <Fade right>
                         <Wrapper2__title>COCOFARM QUESTION</Wrapper2__title>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
@@ -403,18 +408,22 @@ const MyWeb = () => {
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
                         <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                    </Fade>    
                     </Wrapper2__top>
                 </Wrapper2__Box>
             </Wrapper2>
+
             <Wrapper3>
+            <Fade left>
                 <Wrapper2__title>COCOFARM QUESTION</Wrapper2__title> 
                 <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+            </Fade>    
                 <Wrapper3__Box1>
                     <Wrapper3__Img src="https://i.pinimg.com/236x/a7/7a/23/a77a234cb2da77ffcc0bae21c5873b13.jpg"></Wrapper3__Img>
                     <Wrapper3__Img src="https://i.pinimg.com/236x/45/c0/c9/45c0c98b51b47eb841e5bb94636678c4.jpg"></Wrapper3__Img>
                     <Wrapper3__Img src="https://i.pinimg.com/236x/c5/6f/3e/c56f3e5c8b0de41a0f4e45a372f51582.jpg"></Wrapper3__Img>
-                </Wrapper3__Box1>
-
+                </Wrapper3__Box1>   
+            <Fade right>    
                 <Wrapper3__BoxText>
                     <Wrapper3__Desc>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
@@ -427,16 +436,21 @@ const MyWeb = () => {
                     <Wrapper3__Desc>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
-                    </Wrapper3__Desc>
+                    </Wrapper3__Desc>  
                 </Wrapper3__BoxText>  
+            </Fade>          
 
+            <Fade left>    
                 <Wrapper2__title>WELCOME TO COCO FARM COCO FARM IS A PLACE THAT</Wrapper2__title>
                 <Wrapper1__button>공지사항</Wrapper1__button>
+            </Fade>    
             </Wrapper3>
+
             <Wrapper4>
                 <Wrapper4__Box>
                     <Wrapper4__Top>
                         <Wrapper4__L >
+                        <Fade left>    
                             <Wrapper4__Ltitle>WELCOME TO COCO FARM COCO FARM IS</Wrapper4__Ltitle>
                             <Wrapper4__Ldesc>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
@@ -444,6 +458,7 @@ const MyWeb = () => {
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
                             </Wrapper4__Ldesc>
+                        </Fade>       
                         </Wrapper4__L >
                         <Wrapper4__M >
                             <Wrapper4__Mimg></Wrapper4__Mimg>
@@ -455,7 +470,9 @@ const MyWeb = () => {
                     </Wrapper4__Top>
                 </Wrapper4__Box>
             </Wrapper4>
+            
             <Wrapper5></Wrapper5>
+
             <Wrapper6>
                 <Wrapper6__img src="https://i.pinimg.com/236x/73/e8/f5/73e8f53c73abf6288bb22ebe164d23ac.jpg"></Wrapper6__img>
                 <Wrapper6__img src="https://i.pinimg.com/236x/11/37/95/113795baf4684354ce3187d30815b630.jpg"></Wrapper6__img>

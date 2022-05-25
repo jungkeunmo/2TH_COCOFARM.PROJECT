@@ -20,8 +20,6 @@ const SininButton = styled.button`
     color: #fff;
 
     font-size: 15px;
-
-    margin: 0px 0px 0px 620px;
     border: none;
 
     border-radius: 5px;
@@ -84,7 +82,7 @@ const TopBox__R = styled.div`
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 `;
 
@@ -136,14 +134,18 @@ const Header = () => {
     return (
         <Box>
             <TopBox>
-                <Icon></Icon>
-                <Link href="/">
-                    <TitleLink>COCOFARM</TitleLink>
-                </Link>
-        
-                <SininButton>
-                    로그인
-                </SininButton>
+                <TopBox__L></TopBox__L>
+                <TopBox__M>
+                    <Icon></Icon>
+                    <Link href="/">
+                        <TitleLink>COCOFARM</TitleLink>
+                    </Link>
+                </TopBox__M>
+                <TopBox__R>
+                    <SininButton>
+                        로그인
+                    </SininButton>
+                </TopBox__R>
             </TopBox>
 
             <BottomBox>
