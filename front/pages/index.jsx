@@ -105,12 +105,29 @@ const Wrapper3 = styled.div`
   background-color: #226cac;
 
   padding: 0px 130px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+const Wrapper3__Box1 = styled.div`
+  width: 100%;
+  height: 50%;
+  background-color: #525f6b;
+
+  padding: 0px 130px;
+
+  display: flex;
+  flex-direction: row;
 `;
 
 const Wrapper3__Img = styled.img`
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 350px;
   background-color: #486075;
+  margin: 20px;
 `;
 
 const Wrapper4 = styled.div`
@@ -151,11 +168,20 @@ const MyWeb = () => {
                 <Wrapper2__Box></Wrapper2__Box>
             </Wrapper2>
             <Wrapper3>
-                <Wrapper1__Titile>COCOFARM</Wrapper1__Titile>  
+                <Wrapper1__Titile style={{ padding: "" }}>COCOFARM</Wrapper1__Titile>  
                 <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
-                <Wrapper3__Img></Wrapper3__Img>
-                <Wrapper3__Img></Wrapper3__Img>
-                <Wrapper3__Img></Wrapper3__Img>
+
+                <Wrapper3__Box1>
+                    <Wrapper3__Img></Wrapper3__Img>
+                    <Wrapper3__Img></Wrapper3__Img>
+                    <Wrapper3__Img></Wrapper3__Img>
+                </Wrapper3__Box1>
+
+                <Wrapper3__Box1>
+                    <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                    <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                    <Wrapper1__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</Wrapper1__Desc>
+                </Wrapper3__Box1>    
             </Wrapper3>
             <Wrapper4></Wrapper4>
             <Wrapper5></Wrapper5>
