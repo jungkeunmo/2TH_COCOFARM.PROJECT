@@ -57,7 +57,7 @@ const Wrapper1__Img = styled.img`
 
     border-radius: 6px;
 
-    box-shadow: 0.5px 0.5px 4px #9c9c9c;
+    box-shadow: 0.5px 0.5px 2px #9c9c9c;
 `;
 
 const Wrapper1__Text = styled.div`
@@ -103,6 +103,8 @@ const Wrapper1__button = styled.button`
 
     margin: 30px 50px 10px;
     border: none;
+
+    border-radius: 1px;
 `;
 
 /* */
@@ -230,7 +232,58 @@ const Wrapper4__Box = styled.div`
   width: 80%;
   height: 75%;
 
-  background-color: #3b5a7a;
+  background-color: #FEF5ED;
+
+  border-radius: 6px;
+
+  padding: 0px 80px;
+
+  box-shadow: 0.5px 0.5px 4px #9c9c9c;
+`;
+
+const Wrapper4__Top = styled.div`
+    width: 100%;
+    height: 90%;
+
+    border-bottom: 2px solid #000;
+
+    display: flex;
+    flex-direction: row;
+`;
+
+const Wrapper4__L = styled.div`
+  width: 40%;
+  height: 100%;
+
+  background-color: #FEF5ED;
+
+  border-radius: 6px;
+
+  padding: 0px 130px;
+
+  box-shadow: 0.5px 0.5px 4px #9c9c9c;
+`;
+
+const Wrapper4__M = styled.div`
+  width: 40%;
+  height: 100%;
+
+  background-color: #FEF5ED;
+
+  border-radius: 6px;
+
+  padding: 0px 130px;
+
+  box-shadow: 0.5px 0.5px 4px #9c9c9c;
+`;
+
+const Wrapper4__R = styled.div`
+  width: 60%;
+  height: 100%;
+
+  background-color: #FEF5ED;
+
+  border-radius: 6px;
 
   padding: 0px 130px;
 
@@ -338,7 +391,9 @@ const MyWeb = () => {
                 <Wrapper1__button>공지사항</Wrapper1__button>
             </Wrapper3>
             <Wrapper4>
-                <Wrapper4__Box></Wrapper4__Box>
+                <Wrapper4__Box>
+                    <Wrapper4__Top></Wrapper4__Top>
+                </Wrapper4__Box>
             </Wrapper4>
             <Wrapper5></Wrapper5>
             <Wrapper6>
