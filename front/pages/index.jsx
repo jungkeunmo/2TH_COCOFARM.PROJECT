@@ -49,6 +49,7 @@ const Wrapper1__Box2 = styled.div`
 const Wrapper1__Img = styled.img`
     width: 60%;
     height: 60%;
+
     background-image: url("https://i.pinimg.com/236x/54/9d/84/549d84958cd3624449f477e0632f936a.jpg");
     background-color: aqua;
 `;
@@ -67,11 +68,13 @@ const Wrapper1__Text = styled.div`
 
 const Wrapper1__Titile = styled.p`
     font-size: 20px;
+
     margin: 0;
 `;
 
 const Wrapper1__Desc = styled.p`
     font-size: 20px;
+
     margin: 0;
 `;
 
@@ -83,6 +86,7 @@ const Wrapper1__button = styled.button`
 const Wrapper2 = styled.div`
     width: 100%;
     height: 95vh;
+
     background-color: #41627f;
 
     display: flex;
@@ -96,12 +100,14 @@ const Wrapper2 = styled.div`
 const Wrapper2__Box = styled.div`
   width: 60%;
   height: 70%;
+
   background-color: #090b0d;
 `;
 
 const Wrapper3 = styled.div`
   width: 100%;
   height: 150vh;
+
   background-color: #226cac;
 
   padding: 0px 130px;
@@ -115,6 +121,7 @@ const Wrapper3 = styled.div`
 const Wrapper3__Box1 = styled.div`
   width: 100%;
   height: 50%;
+
   background-color: #525f6b;
 
   padding: 0px 130px;
@@ -126,6 +133,7 @@ const Wrapper3__Box1 = styled.div`
 const Wrapper3__BoxText = styled.div`
   width: 100%;
   height: 300px;
+
   background-color: #333d46;
 
   padding: 0px 130px;
@@ -163,7 +171,7 @@ const Wrapper4 = styled.div`
 const Wrapper4__Box = styled.div`
   width: 80%;
   height: 75%;
-  
+
   background-color: #3b5a7a;
 
   padding: 0px 130px;
@@ -172,27 +180,31 @@ const Wrapper4__Box = styled.div`
 const Wrapper5 = styled.div`
   width: 100%;
   height: 15vh;
+
   background-color: #134673;
 
   padding: 0px 130px;
 `;
 
 const Wrapper6 = styled.div`
-  width: 100%;
-  height: 55vh;
-  background-color: #3a75a8;
+    width: 100%;
+    height: 55vh;
 
-  padding: 0px 130px;
+    background-color: #3a75a8;
 
-  display: flex;
-  flex-direction: row;
+    padding: 0px 130px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 `;
 
-const Wrapper6__img = styled.div`
-  width: 100%;
-  height: 55vh;
-  background-color: #3a75a8;
-  padding: 0px 130px;
+const Wrapper6__img = styled.img`
+  width: 230px;
+  height: 230px;
+
+  background-color: #54738d;
 `;
 
 
@@ -242,6 +254,12 @@ const MyWeb = () => {
             </Wrapper4>
             <Wrapper5></Wrapper5>
             <Wrapper6>
+                <Wrapper6__img></Wrapper6__img>
+                <Wrapper6__img></Wrapper6__img>
+                <Wrapper6__img></Wrapper6__img>
+                <Wrapper6__img></Wrapper6__img>
+                <Wrapper6__img></Wrapper6__img>
+                <Wrapper6__img></Wrapper6__img>
             </Wrapper6>
         </Body>
     );
