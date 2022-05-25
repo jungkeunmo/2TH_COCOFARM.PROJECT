@@ -12,6 +12,30 @@ const Icon = styled.div`
     background-image: url("https://i.ibb.co/dM0yzt4/0661c2b408901b4f0a518787ca2aa58b-removebg-preview.png");
 `;
 
+const SininBox = styled.div`
+    width: 30%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`;
+
+const SininButton = styled.button`
+    width: 100px;
+    height: 30px;
+
+    background-color: #99A799;
+    color: #fff;
+
+    font-size: 15px;
+
+    border: none;
+
+    border-radius: 5px;
+`;
+
 const Box = styled.header`
     width: 100%;
     height: 120px;
@@ -25,6 +49,10 @@ const Box = styled.header`
     align-items: center;
     
     background-color: #D3E4CD;
+
+    box-shadow: 2px 2px 8px #999;
+
+    border-bottom: 1px solid #000;
 `;
 
 const TopBox = styled.div`
@@ -50,9 +78,9 @@ const BottomBox = styled.div`
 const TitleLink = styled.a`
     color: #000;
 
-    margin: 0px 40px;
+    margin: 0px 5px;
 
-    font-size: 19px;
+    font-size: 20px;
     font-weight: bold;
 
     transition: 0.5s;
@@ -69,7 +97,8 @@ const CustomLink = styled.a`
 
     margin: 0px 40px;
 
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: bold;
 
     transition: 0.5s;
 
@@ -88,11 +117,16 @@ const Header = () => {
                 <Link href="/">
                     <TitleLink>COCOFARM</TitleLink>
                 </Link>
+                <SininBox>
+                    <SininButton>
+                        로그인
+                    </SininButton>
+                </SininBox>
             </TopBox>
 
             <BottomBox>
                 <Link href="/brand">
-                    <CustomLink>브랜드</CustomLink>
+                    <CustomLink>주문</CustomLink>
                 </Link>
 
                 <Link href="/contact"> 
@@ -101,6 +135,14 @@ const Header = () => {
 
                 <Link href="/review"> 
                     <CustomLink>이용후기</CustomLink>
+                </Link>
+
+                <Link href="/brand">
+                    <CustomLink>공지사항</CustomLink>
+                </Link>
+
+                <Link href="/brand">
+                    <CustomLink>Qna</CustomLink>
                 </Link>
             </BottomBox>
         </Box>

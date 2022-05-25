@@ -152,17 +152,21 @@ const Wrapper2__title = styled.p`
 `;
 
 const Wrapper3 = styled.div`
-  width: 100%;
-  height: 150vh;
+    width: 100%;
+    height: 150vh;
 
-  background-color: #EFD9D1;
+    background-color: #EFD9D1;
+    background-image: url("https://i.ibb.co/LSKHwh8/240-F-281675918-x-A3-TFAp-XN3-Kuwg-M15d-GRfnji-G7-NVc3-MP-removebg-preview.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
-  padding: 0px 130px;
+    padding: 0px 130px;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `;
 
 const Wrapper3__Box1 = styled.div`
@@ -236,7 +240,7 @@ const Wrapper4__Box = styled.div`
 
   border-radius: 6px;
 
-  padding: 0px 80px;
+  padding: 0px 50px;
 
   box-shadow: 0.5px 0.5px 4px #9c9c9c;
 `;
@@ -252,42 +256,81 @@ const Wrapper4__Top = styled.div`
 `;
 
 const Wrapper4__L = styled.div`
-  width: 40%;
+  width: 45%;
   height: 100%;
+`;
 
-  background-color: #FEF5ED;
+const Wrapper4__Ltitle = styled.p`
+    width: 300px;
+    height: 80px;
 
-  border-radius: 6px;
+    margin-top: 80px;
 
-  padding: 0px 130px;
+    font-size: 22px;
+    font-weight: bold;
 
-  box-shadow: 0.5px 0.5px 4px #9c9c9c;
+    border-bottom: 2px solid #000;
+`;
+
+const Wrapper4__Ldesc = styled.p`
+    margin: 0px 100px 0px 0px;
+    font-size: 15px;
 `;
 
 const Wrapper4__M = styled.div`
-  width: 40%;
+  width: 35%;
   height: 100%;
 
-  background-color: #FEF5ED;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
-  border-radius: 6px;
+const Wrapper4__Mimg = styled.div`
+    width: 300px;
+    height: 450px;
 
-  padding: 0px 130px;
+    background-image: url("https://i.pinimg.com/236x/7d/ca/f6/7dcaf669725c3dacac9d66331e2d44c2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
-  box-shadow: 0.5px 0.5px 4px #9c9c9c;
+    box-shadow: 0.5px 0.5px 2px #9c9c9c;
+    border-radius: 6px;
 `;
 
 const Wrapper4__R = styled.div`
-  width: 60%;
+  width: 30%;
   height: 100%;
 
-  background-color: #FEF5ED;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
 
-  border-radius: 6px;
+const Wrapper4__Rimg1 = styled.div`
+    width: 200px;
+    height: 250px;
 
-  padding: 0px 130px;
+    background-image: url("https://i.pinimg.com/236x/65/18/4c/65184caf3d6f0f1177d71e59697c8ee7.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
-  box-shadow: 0.5px 0.5px 4px #9c9c9c;
+    box-shadow: 0.5px 0.5px 2px #9c9c9c;
+    border-radius: 6px;
+
+    margin: 10px 0px;
+`;
+
+const Wrapper4__Rimg2 = styled.div`
+    width: 150px;
+    height: 150px;
+
+    background-image: url("https://i.ibb.co/nLmMK3k/131e31dee5ba8cecc26decb8dd682a16-removebg-preview.png"); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 `;
 
 const Wrapper5 = styled.div`
@@ -392,7 +435,24 @@ const MyWeb = () => {
             </Wrapper3>
             <Wrapper4>
                 <Wrapper4__Box>
-                    <Wrapper4__Top></Wrapper4__Top>
+                    <Wrapper4__Top>
+                        <Wrapper4__L >
+                            <Wrapper4__Ltitle>WELCOME TO COCO FARM COCO FARM IS</Wrapper4__Ltitle>
+                            <Wrapper4__Ldesc>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium
+                            </Wrapper4__Ldesc>
+                        </Wrapper4__L >
+                        <Wrapper4__M >
+                            <Wrapper4__Mimg></Wrapper4__Mimg>
+                        </Wrapper4__M >
+                        <Wrapper4__R >
+                            <Wrapper4__Rimg1></Wrapper4__Rimg1>
+                            <Wrapper4__Rimg2></Wrapper4__Rimg2>
+                        </Wrapper4__R >
+                    </Wrapper4__Top>
                 </Wrapper4__Box>
             </Wrapper4>
             <Wrapper5></Wrapper5>
