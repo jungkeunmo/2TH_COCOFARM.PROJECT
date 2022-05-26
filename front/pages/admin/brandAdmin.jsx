@@ -1,7 +1,4 @@
-import React from "react";
-
-const BrandAdmin = () => {
-    // 목적: 1.페이지에 진입 할 때 헤더를 비활성화
+// 목적: 1.페이지에 진입 할 때 헤더를 비활성화
     //      2.페이지에서 벗어 날 때 다시 활성화
 
     // 헤더를 비활성화 할수있게 할수있는 컴포넌트를 생성
@@ -11,7 +8,68 @@ const BrandAdmin = () => {
     // 헤더를 바꿔 주는 state를 re rendering 해줄수 있는 핸들러를 만든다.
 
     // 헤더를 비활성화 할수있게 할수있는 컴포넌트를 쓰기
-    return <h2>Brand admin</h2>;
+
+import React from "react";
+import styled from "styled-components";
+import { Input } from "antd";
+
+const Whole = styled.div`
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+`;
+
+const Wrapper = styled.div`
+    width: calc(50% - 0.5px);
+    height: 100%;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+`;
+
+const Sec = styled.div`
+    width: 100%;
+`;
+
+const LineBox = styled.div`
+    width: 1px;
+    height: 100%;
+
+    background-color: #ddd;
+`;
+
+const BrandAdmin = () => {
+    return <Whole>
+        <Wrapper>
+            <Sec> LEFT 1</Sec>
+            <Sec>
+                <Input placeholder="title"/>
+                <br />
+                <br />
+                <br />
+                <Input placeholder="content"/>
+                <Input placeholder="content"/>
+                <Input placeholder="content"/>
+            </Sec>
+        </Wrapper >
+        <LineBox />
+        <Wrapper>
+            <Sec>RIGHT 1</Sec>
+            <Sec>
+                <Input placeholder="title"/>
+                <br />
+                <br />
+                <br />
+                <Input placeholder="content"/>
+                <Input placeholder="content"/>
+                <Input placeholder="content"/>
+            </Sec>
+        </Wrapper >
+    </Whole>;
 }
 
 export default BrandAdmin;

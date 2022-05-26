@@ -8,9 +8,11 @@
 |  4  |  /review  | 이용 또는 사용 후기 화면 | review.jsx |
 
 # Theme Color
-1. #ffcab1
-2. #ecdcb0
-3. #c1d7ae
-4. #8cc084
-5. #968e85
-
+1. #FEF5ED
+2. #D3E4CD
+3. #ADC2A9
+4. #99A799
+5. #999B84
+6. #F4EEED
+7. #EFD9D1
+8. #DDB7AB

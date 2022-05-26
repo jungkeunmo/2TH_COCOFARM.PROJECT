@@ -176,7 +176,7 @@ const FooterBoxTop__Desc = styled.p`
     font-size: 16px;
     color: #292a28;
     font-weight: bold;
-    text-shadow: 1px 1px 3px#999;
+    text-shadow: 1px 1px 3px #999;
 `;
 
 const FooterBox__logo = styled.p`
