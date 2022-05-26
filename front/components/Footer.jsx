@@ -34,15 +34,17 @@ const FooterBox__TopBox = styled.div`
 
 const FooterBox__TopBoxicon = styled.div`
     width: 100%;
-    height: 50%;
+    height: 30%;
     margin: 0px 10px;
 
-    font-size: 40px;
+    font-size: 38px;
 
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    gap: 10px 10px;
 `;
 
 const FooterBox__InstagramOutlined = styled(InstagramOutlined)`
@@ -61,13 +63,27 @@ const FooterBox__InstagramOutlined = styled(InstagramOutlined)`
    border-radius: 100%;
 `;
 
+const FooterBox__FacebookOutlined = styled(FacebookOutlined)`
+    width: 70px;
+    height: 70px;
+   
+    border: 3px solid #fff;
+    color: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+   border-radius: 100%;
+`;
+
 const FooterBox__TwitterOutlined = styled(TwitterOutlined)`
     width: 70px;
     height: 70px;
    
     border: 3px solid #fff;
-    color: #000;
-    background: #fff;
+    color: #fff;
 
     display: flex;
     flex-direction: row;
@@ -82,8 +98,7 @@ const FooterBox__YoutubeOutlined = styled(YoutubeOutlined)`
     height: 70px;
    
     border: 3px solid #fff;
-    color: #000;
-    background: #fff;
+    color: #fff;
 
     display: flex;
     flex-direction: row;
@@ -98,8 +113,7 @@ const FooterBox__MailOutlined = styled(MailOutlined)`
     height: 70px;
    
     border: 3px solid #fff;
-    color: #000;
-    background: #fff;
+    color: #fff;
 
     display: flex;
     flex-direction: row;
@@ -111,13 +125,13 @@ const FooterBox__MailOutlined = styled(MailOutlined)`
 
 const FooterBox__TopBoxT = styled.div`
     width: 100%;
-    height: 50%;
-    margin: 0px 10px;
+    height: 30%;
+    margin: 40px 10px 0px;
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 `;
 
 const FooterBox__TopM = styled.div`
@@ -158,10 +172,19 @@ const FooterBox__Desc = styled.p`
     color: #fff;
 `;
 
+const FooterBoxTop__Desc = styled.p`
+    font-size: 16px;
+    color: #292a28;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px#999;
+`;
+
 const FooterBox__logo = styled.p`
     font-size: 40px;
     font-weight: bold;
     color: #fff;
+
+    margin: 0;
 `;
 
 
@@ -171,13 +194,14 @@ const Footer = () => {
             <FooterBox__TopBox>
                 <FooterBox__TopBoxT>
                     <FooterBox__logo>COCOFARM</FooterBox__logo>
+                    <FooterBoxTop__Desc>Lorem ipsum dolor</FooterBoxTop__Desc>
                 </FooterBox__TopBoxT>
                 <FooterBox__TopBoxicon>
                     <FooterBox__InstagramOutlined />
-                    <FacebookOutlined />
-                    <TwitterOutlined />
-                    <YoutubeOutlined />
-                    <MailOutlined />
+                    <FooterBox__FacebookOutlined />
+                    <FooterBox__TwitterOutlined />
+                    <FooterBox__YoutubeOutlined />
+                    <FooterBox__MailOutlined />
                 </FooterBox__TopBoxicon>
             </FooterBox__TopBox>
             <FooterBox__TopM>
