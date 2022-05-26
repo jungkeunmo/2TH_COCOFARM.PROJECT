@@ -48,11 +48,14 @@ const FooterBox__Bottom = styled.div`
 `;
 
 const FooterBox__Titile = styled.p`
-
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
 `;
 
 const FooterBox__Desc = styled.p`
-
+    font-size: 16px;
+    color: #fff;
 `;
 
 const FooterBox__logo = styled.p`
@@ -68,8 +71,15 @@ const Footer = () => {
             <FooterBox__TopBox>
                 <FooterBox__logo>COCOFARM</FooterBox__logo>
             </FooterBox__TopBox>
-            <FooterBox__TopM></FooterBox__TopM>
-            <FooterBox__TopBox></FooterBox__TopBox>
+            <FooterBox__TopM>
+                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+            </FooterBox__TopM>
+            <FooterBox__TopBox>
+                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+                <FooterBox__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</FooterBox__Desc>
+            </FooterBox__TopBox>
         </FooterBox__Top>
         <FooterBox__Bottom></FooterBox__Bottom>
     </FooterBox>;
