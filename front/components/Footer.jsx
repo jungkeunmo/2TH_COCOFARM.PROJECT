@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { InstagramOutlined, FacebookOutlined, TwitterOutlined, YoutubeOutlined, MailOutlined  } from "@ant-design/icons";
 
 const FooterBox = styled.div`
     width: 100%;
@@ -32,6 +33,83 @@ const FooterBox__TopBox = styled.div`
 `;
 
 const FooterBox__TopBoxicon = styled.div`
+    width: 100%;
+    height: 50%;
+    margin: 0px 10px;
+
+    font-size: 40px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+`;
+
+const FooterBox__InstagramOutlined = styled(InstagramOutlined)`
+    width: 70px;
+    height: 70px;
+   
+    border: 3px solid #fff;
+    color: #000;
+    background: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+   border-radius: 100%;
+`;
+
+const FooterBox__TwitterOutlined = styled(TwitterOutlined)`
+    width: 70px;
+    height: 70px;
+   
+    border: 3px solid #fff;
+    color: #000;
+    background: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+   border-radius: 100%;
+`;
+
+const FooterBox__YoutubeOutlined = styled(YoutubeOutlined)`
+    width: 70px;
+    height: 70px;
+   
+    border: 3px solid #fff;
+    color: #000;
+    background: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+   border-radius: 100%;
+`;
+
+const FooterBox__MailOutlined = styled(MailOutlined)`
+    width: 70px;
+    height: 70px;
+   
+    border: 3px solid #fff;
+    color: #000;
+    background: #fff;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+   border-radius: 100%;
+`;
+
+const FooterBox__TopBoxT = styled.div`
     width: 100%;
     height: 50%;
     margin: 0px 10px;
@@ -91,10 +169,15 @@ const Footer = () => {
     return <FooterBox>
         <FooterBox__Top>
             <FooterBox__TopBox>
-                <FooterBox__TopBoxicon>
+                <FooterBox__TopBoxT>
                     <FooterBox__logo>COCOFARM</FooterBox__logo>
-                </FooterBox__TopBoxicon>
+                </FooterBox__TopBoxT>
                 <FooterBox__TopBoxicon>
+                    <FooterBox__InstagramOutlined />
+                    <FacebookOutlined />
+                    <TwitterOutlined />
+                    <YoutubeOutlined />
+                    <MailOutlined />
                 </FooterBox__TopBoxicon>
             </FooterBox__TopBox>
             <FooterBox__TopM>
