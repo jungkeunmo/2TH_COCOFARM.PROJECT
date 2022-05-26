@@ -29,7 +29,17 @@ const FooterBox__TopBox = styled.div`
 
     display: flex;
     flex-direction: column;
+`;
+
+const FooterBox__TopBoxicon = styled.div`
+    width: 100%;
+    height: 50%;
+    margin: 0px 10px;
+
+    display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
 `;
 
 const FooterBox__TopM = styled.div`
@@ -42,15 +52,27 @@ const FooterBox__TopM = styled.div`
     align-items: center;
 `;
 
+const FooterBox__TopMBox = styled.div`
+    width: 33%;
+    height: 100%;
+    margin: 0px 10px;
+
+    display: flex;
+    flex-direction: column;
+`;
+
 const FooterBox__Bottom = styled.div`
     width: 100%;
     height: 15%;
+    padding: 30px 50px;
 `;
 
 const FooterBox__Titile = styled.p`
     font-size: 18px;
     font-weight: bold;
     color: #fff;
+
+    margin-top: 90px;
 `;
 
 const FooterBox__Desc = styled.p`
@@ -59,7 +81,7 @@ const FooterBox__Desc = styled.p`
 `;
 
 const FooterBox__logo = styled.p`
-    font-size: 22px;
+    font-size: 40px;
     font-weight: bold;
     color: #fff;
 `;
@@ -69,19 +91,34 @@ const Footer = () => {
     return <FooterBox>
         <FooterBox__Top>
             <FooterBox__TopBox>
-                <FooterBox__logo>COCOFARM</FooterBox__logo>
+                <FooterBox__TopBoxicon>
+                    <FooterBox__logo>COCOFARM</FooterBox__logo>
+                </FooterBox__TopBoxicon>
+                <FooterBox__TopBoxicon>
+                </FooterBox__TopBoxicon>
             </FooterBox__TopBox>
             <FooterBox__TopM>
-                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
-                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
-                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+                <FooterBox__TopMBox>
+                    <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+                    <FooterBox__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</FooterBox__Desc>
+                </FooterBox__TopMBox>
+                <FooterBox__TopMBox>
+                    <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+                    <FooterBox__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</FooterBox__Desc>
+                </FooterBox__TopMBox>
+                <FooterBox__TopMBox>
+                    <FooterBox__Titile>COCOFARM</FooterBox__Titile>
+                    <FooterBox__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</FooterBox__Desc>
+                </FooterBox__TopMBox>
             </FooterBox__TopM>
             <FooterBox__TopBox>
-                <FooterBox__Titile>COCOFARM</FooterBox__Titile>
-                <FooterBox__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</FooterBox__Desc>
+                <FooterBox__Titile style={{ marginLeft: "50px" }}>COCOFARM</FooterBox__Titile>
+                <FooterBox__Desc style={{ margin: "0px 50px 5px" }}>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantiumLorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantiumLorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</FooterBox__Desc>
             </FooterBox__TopBox>
         </FooterBox__Top>
-        <FooterBox__Bottom></FooterBox__Bottom>
+        <FooterBox__Bottom>
+        <FooterBox__Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. temporibus laudantium</FooterBox__Desc>
+        </FooterBox__Bottom>
     </FooterBox>;
 }
 
