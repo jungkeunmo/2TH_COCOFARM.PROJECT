@@ -1,75 +1,160 @@
-// 목적: 1.페이지에 진입 할 때 헤더를 비활성화
-    //      2.페이지에서 벗어 날 때 다시 활성화
-
-    // 헤더를 비활성화 할수있게 할수있는 컴포넌트를 생성
-
-    // 헤더를 바꿔 줄 수 있는 state를 만들어준다.
-
-    // 헤더를 바꿔 주는 state를 re rendering 해줄수 있는 핸들러를 만든다.
-
-    // 헤더를 비활성화 할수있게 할수있는 컴포넌트를 쓰기
-
-import React from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import styled from "styled-components";
-import { Input } from "antd";
+import { Input, Form, Button, message } from "antd";
+import axios from "axios";
 
 const Whole = styled.div`
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 `;
 
 const Wrapper = styled.div`
-    width: calc(50% - 0.5px);
-    height: 100%;
+  width: calc(50% - 0.5px);
+  height: 100%;
 
-    padding: 10px;
+  padding: 10px;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 `;
 
 const Sec = styled.div`
-    width: 100%;
+  width: 100%;
 `;
 
 const LineBox = styled.div`
-    width: 1px;
-    height: 100%;
-
-    background-color: #ddd;
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
 `;
 
 const BrandAdmin = () => {
-    return <Whole>
-        <Wrapper>
-            <Sec> LEFT 1</Sec>
-            <Sec>
-                <Input placeholder="title"/>
-                <br />
-                <br />
-                <br />
-                <Input placeholder="content"/>
-                <Input placeholder="content"/>
-                <Input placeholder="content"/>
-            </Sec>
-        </Wrapper >
-        <LineBox />
-        <Wrapper>
-            <Sec>RIGHT 1</Sec>
-            <Sec>
-                <Input placeholder="title"/>
-                <br />
-                <br />
-                <br />
-                <Input placeholder="content"/>
-                <Input placeholder="content"/>
-                <Input placeholder="content"/>
-            </Sec>
-        </Wrapper >
-    </Whole>;
-}
+  const [form1] = Form.useForm();
+  const [form2] = Form.useForm();
+
+  const [row1, setRow1] = useState(null);
+  const [row2, setRow2] = useState(null);
+
+  const getData = async () => {
+    const result = await axios.post("http://localhost:4000/api/brand/list");
+    setRow1(result.data[0]);
+    setRow2(result.data[1]);
+  };
+
+  const finishHandler1 = useCallback(async(data) => {
+        const result = await axios.post("http://localhost:4000/api/brand/update", {
+            id: 1,
+            title: data.title,
+            content1: data.content1,
+            content2: data.content2,
+            content3: data.content3,
+        });
+
+        if(result.data.result) {
+            message.success("브랜드 화면정보가 수정되었습니다.");
+            getData();
+        };
+  });
+
+  const finishHandler2 = useCallback(async(data) => {
+    const result = await axios.post("http://localhost:4000/api/brand/update", {
+        id: 2,
+        title: data.title,
+        content1: data.content1,
+        content2: data.content2,
+        content3: data.content3,
+    });
+
+    if(result.data.result) {
+        message.success("브랜드 화면정보가 수정되었습니다.");
+        getData();
+    };
+});
+
+  useEffect(() => {
+    if (row1 && row2) {
+      form1.setFieldsValue({
+        title: row1.title,
+        content1: row1.content1,
+        content2: row1.content2,
+        content3: row1.content3,
+      });
+
+      form2.setFieldsValue({
+        title: row2.title,
+        content1: row2.content1,
+        content2: row2.content2,
+        content3: row2.content3,
+      });
+    }
+  }, [row1, row2]);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  return (
+    <Whole>
+      <Wrapper>
+        <Form form={form1} onFinish={finishHandler1}>
+          <Sec></Sec>
+          <Sec>
+            <Form.Item name="title">
+              <Input placeholder="title" />
+            </Form.Item>
+            <br />
+
+            <Form.Item name="content1">
+              <Input placeholder="content" />
+            </Form.Item>
+
+            <Form.Item name="content2">
+              <Input placeholder="content" />
+            </Form.Item>
+
+            <Form.Item name="content3">
+              <Input placeholder="content" />
+            </Form.Item>
+
+            <Button type="primary" htmlType="submit" style={{ float: "right" }}>
+              저장
+            </Button>
+          </Sec>
+        </Form>
+      </Wrapper>
+      <LineBox />
+      <Wrapper>
+        <Form form={form2} onFinish={finishHandler2}>
+          <Sec></Sec>
+          <Sec>
+            <Form.Item name="title">
+              <Input placeholder="title" />
+            </Form.Item>
+            <br />
+
+            <Form.Item name="content1">
+              <Input placeholder="content" />
+            </Form.Item>
+
+            <Form.Item name="content2">
+              <Input placeholder="content" />
+            </Form.Item>
+
+            <Form.Item name="content3">
+              <Input placeholder="content" />
+            </Form.Item>
+
+            <Button type="primary" htmlType="submit" style={{ float: "right" }}>
+              저장
+            </Button>
+          </Sec>
+        </Form>
+      </Wrapper>
+    </Whole>
+  );
+};
 
 export default BrandAdmin;

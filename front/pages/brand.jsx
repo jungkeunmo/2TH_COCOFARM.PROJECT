@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState, useCallback} from "react";
 import styled from "styled-components";
 import DescView from "../components/DescView";
 import DescTitle from "../components/DescTitile";
@@ -99,11 +99,25 @@ const CustomBtn = styled(Button)`
 `;
 
 const Brand = () => {
+
+    const [row1, setRow1] = useState(null);
+    const [row2, setRow2] = useState(null);
+
+    const getData = async () => {
+        const result = await axios.post("http://localhost:4000/api/brand/list");
+        setRow1(result.data[0]);
+        setRow2(result.data[1]);
+    };
+
+      useEffect(() => {
+        getData();
+      }, []);
+
     return (
         <Wrapper>
             <Fade>
                 <RelWrapper>
-                    <TopImage src=""/>
+                    <TopImage src="https://i.pinimg.com/474x/72/cb/7b/72cb7b87f64c6f6819c2f2cedf09b17f.jpg"/>
 
                     <TextBox>
                         <div>건강한 식단과</div>
@@ -117,22 +131,22 @@ const Brand = () => {
 
             <div style={{ marginBottom: "300px" }}></div>
 
-            <DescTitle />
+            <DescTitle title={row1 ? row1.title : ""}/>
             <DescView mode={1} 
-                title="코코팜은"
-                image="https://i.ibb.co/rF86GRW/2eab7baa28ff32564243890f817edfb5.jpg"
-                desc1="저희 코코팜은 쌀,콩,고추,옥수수,감자,오이,고구마,깨,배추,양배추,포도,수박, 등등을"
-                desc2="무농약으로 재배하고 있습니다."
-                desc3="앞으로도 고객 여러분들께 깨끗하고 신선한 농산물을 전달하겠습니다."
+                title={row1 ? row1.title : ""}
+                image="https://i.pinimg.com/474x/c4/ec/c0/c4ecc0c80aa0dce3ec267949535fe707.jpg"
+                desc1={row1 ? row1.content1 : ""}
+                desc2={row1 ? row1.content2 : ""}
+                desc3={row1 ? row1.content3 : ""}
             />
             
-            <DescTitle />
+            <DescTitle title={row2 ? row1.title : ""} />
             <DescView mode={2} 
-                title="코코팜의 환경은"
+                title={row2 ? row2.title : ""}
                 image="https://i.pinimg.com/474x/c8/b8/95/c8b895ca679ea00116bb75f435cb54ec.jpg"
-                desc1="농부의 노력으로 특허 받은 친환경 비료만을 사용하여"
-                desc2="채소를 재배하고 있습니다."
-                desc3="항상 최고를 드리겠다는 마인드로 하겠습니다."
+                desc1={row2 ? row2.content1 : ""}
+                desc2={row2 ? row2.content2 : ""}
+                desc3={row2 ? row2.content3 : ""}
             />
 
             <div style={{ marginBottom: "50px" }}>

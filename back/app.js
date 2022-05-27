@@ -5,6 +5,7 @@ dotenv.config();
 const cors = require("cors");
 
 const contactRouter = require("./routers/contactRouter");
+const brandRouter = require("./routers/brandRouter");
 
 const PORT = process.env.PORT || 4000;
 const app = express();
@@ -15,6 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use("/api/contact", contactRouter);
+app.use("/api/brand", brandRouter);
 
 app.listen(PORT, () => {
     console.log(`🍏http://localhost:${PORT} , NEXT.JS SERVER START🍏`);
