@@ -131,7 +131,7 @@ const Brand = () => {
 
             <div style={{ marginBottom: "300px" }}></div>
 
-            <DescTitle title={row1 ? row1.title : ""}/>
+            <DescTitle title={row1 ? row1.title : ""} />
             <DescView mode={1} 
                 title={row1 ? row1.title : ""}
                 image="https://i.pinimg.com/474x/c4/ec/c0/c4ecc0c80aa0dce3ec267949535fe707.jpg"
@@ -140,7 +140,7 @@ const Brand = () => {
                 desc3={row1 ? row1.content3 : ""}
             />
             
-            <DescTitle title={row2 ? row1.title : ""} />
+            <DescTitle title={row2 ? row1.title : ""}/>
             <DescView mode={2} 
                 title={row2 ? row2.title : ""}
                 image="https://i.pinimg.com/474x/c8/b8/95/c8b895ca679ea00116bb75f435cb54ec.jpg"
