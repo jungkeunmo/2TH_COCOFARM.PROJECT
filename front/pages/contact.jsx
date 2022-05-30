@@ -5,21 +5,23 @@ import axios from "axios";
 
 const Wrapper = styled.div`
     width: 100%;
+    height: 110vh;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
 
-    margin: 50px 0px;
+    background: #FEF5ED;
 `;
 
 const ViewImage = styled.img`
-    width: 40%;
-    height: 600px;
+    width: 24%;
+    height: 550px;
 
     object-fit: cover;
 
-    border-radius: 8px;
+    border-radius: 10px;
 
     box-shadow: 3px 3px 3px #999;
 `;
@@ -29,7 +31,9 @@ const FormWrapper = styled.div`
     height: 600px;
 
     border-radius: 8px;
-    box-shadow: 3px 3px 3px #999;
+    box-shadow: 2px 2px 4px #b8b8b8;
+
+    background: #fafafa;
 
     padding: 10px;
 `;
