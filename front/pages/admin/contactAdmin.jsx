@@ -42,7 +42,7 @@ const ContactAdmin = () => {
         },
         {
             title : "Name",
-            render : (data) => <div onClick={() => titleClickHandler(data)}>{data.title}</div>, 
+            dataIndex : "name"
         },
         {
             title : "Price",
@@ -53,7 +53,7 @@ const ContactAdmin = () => {
             dataIndex : "formatCreatedAt"
         },
         {
-            title : "mobile",
+            title : "Mobile",
             dataIndex : "mobile"
         },
     ]

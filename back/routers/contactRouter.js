@@ -45,7 +45,7 @@ router.get("/list", (req, res, next) => {
     const selectQuery = `
         SELECT 	id,
 		        name,
-		        price,
+		        CONCAT((price), "원") AS price,
 		        mobile,
 		        DATE_FORMAT(createdAt, "%Y년%m월%d일") AS formatCreatedAt,
 		        content
