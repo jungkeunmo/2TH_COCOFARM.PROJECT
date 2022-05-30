@@ -41,4 +41,25 @@ router.post("/new", (req, res, next) => {
     }
 });
 
+router.get("/list", (req, res, next) => {
+    const selectQuery = `
+        SELECT 	id,
+		        name,
+		        price,
+		        mobile,
+		        DATE_FORMAT(createdAt, "%Y년%m월%d일") AS formatCreatedAt,
+		        content
+          FROM  contact
+         ORDER 	BY createdAt DESC
+    `;
+
+    db.query(selectQuery, (error, rows) => {
+        if (error) {
+            console.log(error);
+        }
+
+        return res.status(200).json(rows);
+    });
+})
+
 module.exports = router;
