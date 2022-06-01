@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {Form, Input, Button, message } from "antd";
+import {Form, Button, message } from "antd";
 import axios from "axios";
 
 const Wrapper = styled.div`
@@ -31,10 +31,8 @@ const ViewImage = styled.img`
 
     position: absolute;
 
-    right: 0px;
-    left: 200px;
-    top: 160px;
-    bottom: 0px;
+    right: 1000px;
+    bottom: 150px;
 `;
 
 const FormWrapper = styled.div`
@@ -90,7 +88,7 @@ const FormInput = styled.input`
     width: 500px;
     height: 50px;
 
-    border-radius: 5px;
+    border-radius: 6px;
     border: none;
 
     font-size: 14px;
@@ -108,7 +106,7 @@ const FormTextareaInput = styled.textarea`
     height: 200px;
 
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     outline: none;
     resize: none;
 
