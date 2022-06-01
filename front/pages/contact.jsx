@@ -21,7 +21,7 @@ const Wrapper = styled.div`
 
 const ViewImage = styled.img`
     width: 30%;
-    height: 650px;
+    height: 700px;
 
     object-fit: cover;
 
@@ -38,8 +38,8 @@ const ViewImage = styled.img`
 `;
 
 const FormWrapper = styled.div`
-    width: 150vh;
-    height: 750px;
+    width: 140vh;
+    height: 800px;
 
     border-radius: 10px;
     box-shadow: 2px 2px 4px #b8b8b8;
@@ -47,29 +47,91 @@ const FormWrapper = styled.div`
     background: #fafafa;
 
     padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+`;
+
+const FormWrapper__Box1 = styled.div`
+   width: 40%;
+   height: 100%;
+`;
+
+const FormWrapper__Box2 = styled.div`
+   width: 60%;
+   height: 100%;
+
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+
+   padding: 80px 30px;
 `;
 
 const FormWrapperTitile = styled.p`
-    font-size: 30px;
+    font-size: 23px;
+    font-weight: bold;
+
+    margin: 0px 0px 15px;
 `;
 
 const FormWrapperDesc = styled.p`
+    font-size: 14px;
+    width: 550px;
+
+    margin-bottom: 40px;
+`;
+
+const FormBoxInput = styled(Form.Item)`
     font-size: 20px;
 `;
 
-const FormInput = styled(Form.Item)`
-    font-size: 20px;
-    background-color: red;
+const FormInput = styled.input`
+    width: 500px;
+    height: 50px;
+
+    border-radius: 5px;
+    border: none;
+
+    font-size: 14px;
+    padding: 10px;
+
+    background: #efeded;
 `;
 
 const FormTextarea = styled(Form.Item)`
     font-size: 20px;
-    background-color: red;
 `;
 
-const FormTextareaInput = styled(Input.TextArea)`
-    width: 400px;
-    height: 400px;
+const FormTextareaInput = styled.textarea`
+    width: 500px;
+    height: 200px;
+
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+
+    font-size: 14px;
+    padding: 10px;
+
+    background: #efeded;
+`;
+
+const FormButton = styled(Button)`
+    width: 500px;
+    height: 60px;
+
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    
+    
+    background: #3d4b3d;
+
+    & :hover {
+        background: #58775c;
+    }
 `;
 
 const Contact = () => {
@@ -92,48 +154,47 @@ const Contact = () => {
                 src={`https://i.pinimg.com/474x/3a/f3/4a/3af34a7055b6205fa4b97447fbc6fb06.jpg`}
             />
             <FormWrapper>
+            <FormWrapper__Box1></FormWrapper__Box1>
+            <FormWrapper__Box2>
                 <FormWrapperTitile>COCOFARM</FormWrapperTitile>
-                <FormWrapperDesc>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quae error ad quasi ut beatae laudantium laborum libero itaque sunt dolores architecto nisi repudiandae possimus quam</FormWrapperDesc>
+                <FormWrapperDesc>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quae error ad quasi ut beatae laudantium laborum</FormWrapperDesc>
                 <Form
                     form={contactForm}
                     wrapperCol={{ span: 20}}
                     labelCol= {{ span : 4 }}
                     onFinish={finishHandler}
                 >
-                    <FormInput
-                        label="고객명"
+                    <FormBoxInput
                         name="name"
                         rules={[{ required: true , message: "고객명은 필수입니다."}]}
                     >
-                        <Input placeholder="문의내용"/>
-                    </FormInput>
+                        <FormInput placeholder="고객명을 작성해주세요..."/>
+                    </FormBoxInput>
 
-                    <Form.Item
-                        label="금액"
+                    <FormBoxInput
                         name="price"
                         rules={[{ required: true , message: "금액은 필수입니다."}]}
                     >
-                        <Input type="number" placeholder="문의내용"/>
-                    </Form.Item>
+                        <FormInput type="number" placeholder="금액을 작성해주세요..."/>
+                    </FormBoxInput>
 
-                    <Form.Item
-                        label="연락처"
+                    <FormBoxInput
                         name="mobile"
                         rules={[{ required: true , message: "연락처는 필수입니다."}]}
                     >
-                        <Input placeholder="문의내용"/>
-                    </Form.Item>
+                        <FormInput placeholder="연락처를 작성해주세요..."/>
+                    </FormBoxInput>
 
                     <FormTextarea
-                        label="문의내용"
                         name="content"
                         rules={[{ required: true , message: "문의내용 필수입니다."}]}
                     >
-                        <FormTextareaInput placeholder="문의내용"/>
+                        <FormTextareaInput placeholder="문의내용을 작성해주세요..."/>
                     </FormTextarea>
 
-                    <Button type="primary" htmlType="submit">문의하기</Button>
+                    <FormButton type="primary" htmlType="submit">문의하기</FormButton>
                 </Form>
+            </FormWrapper__Box2>
             </FormWrapper>
         </Wrapper >;
 }
