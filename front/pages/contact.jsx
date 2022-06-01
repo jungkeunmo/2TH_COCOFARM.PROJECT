@@ -9,33 +9,67 @@ const Wrapper = styled.div`
 
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content:flex-end;
     align-items: center;
 
     background: #FEF5ED;
+
+    position: relative;
+
+    padding: 0px 200px;
 `;
 
 const ViewImage = styled.img`
-    width: 24%;
-    height: 550px;
+    width: 30%;
+    height: 650px;
 
     object-fit: cover;
 
     border-radius: 10px;
 
     box-shadow: 3px 3px 3px #999;
+
+    position: absolute;
+
+    right: 0px;
+    left: 200px;
+    top: 160px;
+    bottom: 0px;
 `;
 
 const FormWrapper = styled.div`
-    width: 40%;
-    height: 600px;
+    width: 150vh;
+    height: 750px;
 
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 2px 2px 4px #b8b8b8;
 
     background: #fafafa;
 
     padding: 10px;
+`;
+
+const FormWrapperTitile = styled.p`
+    font-size: 30px;
+`;
+
+const FormWrapperDesc = styled.p`
+    font-size: 20px;
+`;
+
+const FormInput = styled(Form.Item)`
+    font-size: 20px;
+    background-color: red;
+`;
+
+const FormTextarea = styled(Form.Item)`
+    font-size: 20px;
+    background-color: red;
+`;
+
+const FormTextareaInput = styled(Input.TextArea)`
+    width: 400px;
+    height: 400px;
 `;
 
 const Contact = () => {
@@ -55,29 +89,31 @@ const Contact = () => {
 
     return <Wrapper>
             <ViewImage 
-                src={`https://image.edaily.co.kr/images/Photo/files/NP/S/2020/01/PS20011500928.jpg`}
+                src={`https://i.pinimg.com/474x/3a/f3/4a/3af34a7055b6205fa4b97447fbc6fb06.jpg`}
             />
             <FormWrapper>
+                <FormWrapperTitile>COCOFARM</FormWrapperTitile>
+                <FormWrapperDesc>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis quae error ad quasi ut beatae laudantium laborum libero itaque sunt dolores architecto nisi repudiandae possimus quam</FormWrapperDesc>
                 <Form
                     form={contactForm}
                     wrapperCol={{ span: 20}}
                     labelCol= {{ span : 4 }}
                     onFinish={finishHandler}
                 >
-                    <Form.Item 
+                    <FormInput
                         label="고객명"
                         name="name"
                         rules={[{ required: true , message: "고객명은 필수입니다."}]}
                     >
-                        <Input />
-                    </Form.Item>
+                        <Input placeholder="문의내용"/>
+                    </FormInput>
 
                     <Form.Item
                         label="금액"
                         name="price"
                         rules={[{ required: true , message: "금액은 필수입니다."}]}
                     >
-                        <Input type="number"/>
+                        <Input type="number" placeholder="문의내용"/>
                     </Form.Item>
 
                     <Form.Item
@@ -85,16 +121,16 @@ const Contact = () => {
                         name="mobile"
                         rules={[{ required: true , message: "연락처는 필수입니다."}]}
                     >
-                        <Input />
+                        <Input placeholder="문의내용"/>
                     </Form.Item>
 
-                    <Form.Item
+                    <FormTextarea
                         label="문의내용"
                         name="content"
                         rules={[{ required: true , message: "문의내용 필수입니다."}]}
                     >
-                        <Input />
-                    </Form.Item>
+                        <FormTextareaInput placeholder="문의내용"/>
+                    </FormTextarea>
 
                     <Button type="primary" htmlType="submit">문의하기</Button>
                 </Form>

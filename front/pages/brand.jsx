@@ -109,9 +109,15 @@ const Brand = () => {
         setRow2(result.data[1]);
     };
 
-      useEffect(() => {
+    useEffect(() => {
         getData();
-      }, []);
+    }, []);
+
+    const rt = useRouter();
+
+    const goContact = () => {
+        rt.push("/contact");
+    };  
 
     return (
         <Wrapper>
