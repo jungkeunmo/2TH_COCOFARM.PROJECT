@@ -60,6 +60,12 @@ router.get("/list", (req, res, next) => {
 
         return res.status(200).json(rows);
     });
-})
+});
+
+router.post("write", (req, res, next) => {
+    const {name, price, mobile, content} = req.body;
+
+    
+});
 
 module.exports = router;
