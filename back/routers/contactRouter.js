@@ -41,31 +41,65 @@ router.post("/new", (req, res, next) => {
     }
 });
 
-router.get("/list", (req, res, next) => {
+router.post("/list", (req, res, next) => {
+    const {selectType} = req.body; 
+
     const selectQuery = `
         SELECT 	id,
 		        name,
-		        CONCAT((price), "원") AS price,
+		        CONCAT(FORMAT(price, 0), "원") AS viewPrice,
 		        mobile,
-		        DATE_FORMAT(createdAt, "%Y년%m월%d일") AS formatCreatedAt,
-		        content
+                createdAt,
+		        DATE_FORMAT(createdAt, "%Y년%m월%d일") AS viewCreatedAt,
+		        content,
+                isCompleted,
+                completdAt,
+                DATE_FORMAT(completdAt, "%Y년%m월%d일") AS viewCompletdAt
           FROM  contact
+         WHERE  1 = 1
+           ${parseInt(selectType) === 2 ? "AND  isCompleted = true" : ""}
+           ${parseInt(selectType) === 1 ? "AND  isCompleted = false" : ""}
          ORDER 	BY createdAt DESC
     `;
 
-    db.query(selectQuery, (error, rows) => {
-        if (error) {
-            console.log(error);
-        }
-
-        return res.status(200).json(rows);
-    });
+    try {
+        db.query(selectQuery, (error, rows) => {
+            if (error) {
+                console.error(error);
+                return res.status(400).send("문의리스트 를 조회 할수 없습니다.")
+            }
+    
+            return res.status(200).json(rows);
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(400).send("문의리스트 를 조회 할수 없습니다.")
+    }
 });
 
-router.post("write", (req, res, next) => {
-    const {name, price, mobile, content} = req.body;
+router.post("/com", (req, res, next) => {
+    const {id} = req.body;
 
+    const updateQ = `
+        UPDATE   contact
+           SET   isCompleted = true,
+                 completdAt = NOW()
+         WHERE   id = ${id}
+    `;
+
+    try {
+        db.query(updateQ, (error, rows) => {
+            if (error) {
+                console.error(error);
+                return res.status(400).send("문의리스트를 처리 할수 없습니다.")
+            }
     
+            return res.status(200).json({result : true});
+        });
+    } catch (error) {
+        console.log(error);
+        return res.status(400).send("문의리스트 를 처리 할수 없습니다.")
+    }
 });
 
 module.exports = router;

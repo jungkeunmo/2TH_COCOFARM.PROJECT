@@ -32,7 +32,7 @@ const ViewImage = styled.img`
     position: absolute;
 
     right: 1000px;
-    bottom: 150px;
+    bottom: 120px;
 `;
 
 const FormWrapper = styled.div`
