@@ -17,6 +17,7 @@
     "babel-plugin-styled-components": "^2.0.6",
     "next": "^9.5.5",
     "react": "^16.14.0",
+    "react-cookie": "^4.1.1",
     "react-dom": "^16.14.0",
     "react-reveal": "^1.2.2",
     "styled-components": "^5.3.5"
