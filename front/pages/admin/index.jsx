@@ -44,7 +44,7 @@ const BottomLift = styled.div`
 
 const BLBox = styled.div`
     width: 95%;
-    height: ${(props) => props.height || "350px"};
+    height: ${(props) => props.height || "300px"};
 
     background-color: aqua;
 
@@ -60,17 +60,33 @@ const BottomRight = styled.div`
     background-color: #7e7a6a;
 `;
 
+const BRBox = styled.div`
+    width: 100%;
+    height: ${(props) => props.height || "180px"};
+
+    background-color: aqua;
+
+    margin-top: 10px;
+
+    border-radius: 14px;
+`;
+
+
 const AdminIndex = () => {
     return (
         <Wrapper>
             <TopBox></TopBox>
             <BottomBox>
                 <BottomLift>
-                    <BLBox height="400px"></BLBox>
+                    <BLBox height="350px"></BLBox>
                     <BLBox></BLBox>
-
+                    <BLBox></BLBox>
                 </BottomLift>
-                <BottomRight></BottomRight>
+
+                <BottomRight>
+                    <BRBox></BRBox>
+                    <BRBox height="750px"></BRBox>
+                </BottomRight>
             </BottomBox>
         </Wrapper>
     )
